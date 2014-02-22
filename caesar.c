@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-//review: it would be nice to have a one line, short comment explaining what this function does
+//This programm encripts any sentence you've input using Caesar's encript.
+
 //in this case it could be smth like "encrypts sentence, but it looks like it actually encrypts one character" =)
 //so please rename it and add corresponding comment
 int encrypt_sentence(int codeChar, int key)//review: codeChar -> charCode
