@@ -5,13 +5,13 @@
 
 //This programm encripts any sentence you've input using Caesar's encript.
 
-int encrypt_char(int codeChar, int key)//review: codeChar -> charCode
+int encrypt_char(int charCode, int key)
 {
-    if (codeChar >= 65 && codeChar <= 90)
-        return 65 + (codeChar - 65 + key) % 26;  
-    else if (codeChar >= 97 && codeChar <= 122)
-        return 97 + (codeChar - 97 + key) % 26; 
-    else return codeChar;
+    if (charCode >= 65 && charCode <= 90)
+        return 65 + (charCode - 65 + key) % 26;  
+    else if (charCode >= 97 && charCode <= 122)
+        return 97 + (charCode - 97 + key) % 26; 
+    else return charCode;
 } 
 
 int main(int argc, string argv[])
@@ -19,7 +19,7 @@ int main(int argc, string argv[])
     
     if (argc != 2 || atoi(argv[1]) < 0)
     {
-        printf("Sorry\n"); //=) why not printf("Bye, looser!"); ?
+        printf("Bye, dummy loser!\n");
         return 1;
     }
     else 
@@ -29,8 +29,6 @@ int main(int argc, string argv[])
         int n = strlen(sentence);
         for (int i = 0; i < n; i++)
         {
-            //translit? really? omg -> facepalm
-            //perebrat i zashifrovat! 
             //review: change function name and signature so it would accept char and return char (incapsulatioin bitch)
             sentence[i] = (char)encrypt_char((int)sentence[i], key);
         }
