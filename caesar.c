@@ -7,11 +7,12 @@
 
 int encrypt_char(int charCode, int key)
 {
+    charCode = (int)charCode;
     if (charCode >= 65 && charCode <= 90)
         return 65 + (charCode - 65 + key) % 26;  
     else if (charCode >= 97 && charCode <= 122)
         return 97 + (charCode - 97 + key) % 26; 
-    else return charCode;
+    else return (char)charCode;
 } 
 
 int main(int argc, string argv[])
@@ -29,8 +30,7 @@ int main(int argc, string argv[])
         int n = strlen(sentence);
         for (int i = 0; i < n; i++)
         {
-            //review: change function name and signature so it would accept char and return char (incapsulatioin bitch)
-            sentence[i] = (char)encrypt_char((int)sentence[i], key);
+            sentence[i] = encrypt_char(sentence[i], key);
         }
         printf("%s\n", sentence);
     }
