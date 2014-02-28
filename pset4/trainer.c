@@ -35,10 +35,10 @@ int main(int argc, string argv[]){
 int getAge(void){
 	printf("Input an age of one dolphin: ");
 	int age = GetInt();
-	// while (age <= 0){
-			//ask - Did he die? You have to input age more then 0 again for this dolphin.
-			//age = GetInt();
-			//}
+	while (age <= 0){
+		printf("Did he die? You have to input age more then 0 again for this dolphin: ");
+		age = GetInt();
+	}
 	//printf("Age: %d\n", age);
 	return age;
 }
