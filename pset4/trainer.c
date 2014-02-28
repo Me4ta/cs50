@@ -20,17 +20,14 @@ int main(int argc, string argv[]){
 										
 		int numDolph = atoi(argv[1]);
 		int ageDolph[numDolph];
+		int maxAge = 0;
 		for (int i = 0; i < numDolph; i++){
 		
 			ageDolph[i] = getAge();
-		}
-		int maxAge = 0;
-		for (int i = 0; i < numDolph; i++){
-			
 			if (ageDolph[i] > maxAge){
 				maxAge = ageDolph[i];
 			}
-		}				
+		}
 		printf("Max dolphin's age is %d\n", maxAge);
 	}
 }
@@ -38,7 +35,7 @@ int getAge(void){
 	printf("Input an age of one dolphin: ");
 	int age = GetInt();
 	while (age <= 0){
-		printf("Did he die? You have to input age more then 0 again for this dolphin: ");
+		printf("Did he dead? You have to input age more then 0 again for this dolphin: ");
 		age = GetInt();
 	}
 	//printf("Age: %d\n", age);
