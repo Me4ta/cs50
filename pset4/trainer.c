@@ -6,11 +6,20 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int getAge(void);
-int main(int argc, int argv[]){
-	//check argc = 2 and the numDolph = argc > 0;
-	//string ageDolph = 0;
+
+int main(int argc, string argv[]){
+
+	if (argc != 2 || atoi(argv[1]) <= 0) {
+		printf("My programm doesn't work with dummys\n");
+		return 1;
+		
+		} else {
+										
+			//int numDolph = atoi(argv[1]);
+			//string ageDolph = 0;
 	//for (i = 0; i < numDolph; i++){
 		
 		//ageDolph[i] = getAge();
@@ -21,6 +30,7 @@ int main(int argc, int argv[]){
 		//maxAge = ageDolph;
 		//}
 	//printf("Max dolphin's age is %d\n", maxAge);
+	}
 }
 int getAge(void){
 	//ask "Input age of dolphin"
@@ -28,6 +38,6 @@ int getAge(void){
 	// while (age <= 0){
 			//ask - Did he die? You have to input age more then 0 again for this dolphin.
 			//age = GetInt();
-			}
-	//return age;
+			//}
+	return 1; //age;
 }
