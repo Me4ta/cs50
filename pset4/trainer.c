@@ -13,31 +13,32 @@ int getAge(void);
 int main(int argc, string argv[]){
 
 	if (argc != 2 || atoi(argv[1]) <= 0) {
-		printf("My programm doesn't work with dummys\n");
+		printf("My programm doesn't work with dummies\n");
 		return 1;
 		
-		} else {
+	} else {
 										
-			//int numDolph = atoi(argv[1]);
-			//string ageDolph = 0;
-	//for (i = 0; i < numDolph; i++){
+		int numDolph = atoi(argv[1]);
+		int ageDolph[numDolph];
+		for (int i = 0; i < numDolph; i++){
 		
-		//ageDolph[i] = getAge();
-		//}
-	//int maxAge = 0;
-	//for (i = 0; i < numDolph; i++){
+			ageDolph[i] = getAge();
+		}
+		//int maxAge = 0;
+		//for (i = 0; i < numDolph; i++){
 		//if (ageDilph[i] < maxAge){
 		//maxAge = ageDolph;
 		//}
-	//printf("Max dolphin's age is %d\n", maxAge);
+		//printf("Max dolphin's age is %d\n", maxAge);
 	}
 }
 int getAge(void){
-	//ask "Input age of dolphin"
-	//int age = GetInt();
+	printf("Input an age of one dolphin: ");
+	int age = GetInt();
 	// while (age <= 0){
 			//ask - Did he die? You have to input age more then 0 again for this dolphin.
 			//age = GetInt();
 			//}
-	return 1; //age;
+	//printf("Age: %d\n", age);
+	return age;
 }
