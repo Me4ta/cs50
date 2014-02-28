@@ -24,12 +24,14 @@ int main(int argc, string argv[]){
 		
 			ageDolph[i] = getAge();
 		}
-		//int maxAge = 0;
-		//for (i = 0; i < numDolph; i++){
-		//if (ageDilph[i] < maxAge){
-		//maxAge = ageDolph;
-		//}
-		//printf("Max dolphin's age is %d\n", maxAge);
+		int maxAge = 0;
+		for (int i = 0; i < numDolph; i++){
+			
+			if (ageDolph[i] > maxAge){
+				maxAge = ageDolph[i];
+			}
+		}				
+		printf("Max dolphin's age is %d\n", maxAge);
 	}
 }
 int getAge(void){
