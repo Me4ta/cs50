@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int getAge(void);
+int* getAge(void);
 
 int main(int argc, string argv[]){
 
@@ -19,24 +19,25 @@ int main(int argc, string argv[]){
 	} else {
 										
 		int numDolph = atoi(argv[1]);
-		int ageDolph[numDolph];
+		int* ageDolph[numDolph];
 		int maxAge = 0;
 		for (int i = 0; i < numDolph; i++){
 		
 			ageDolph[i] = getAge();
-			if (ageDolph[i] > maxAge){
-				maxAge = ageDolph[i];
+			if (*ageDolph[i] > maxAge){
+				maxAge = *ageDolph[i];
 			}
 		}
 		printf("Max dolphin's age is %d\n", maxAge);
 	}
 }
-int getAge(void){
+int* getAge(void){
 	printf("Input an age of one dolphin: ");
-	int age = GetInt();
-	while (age <= 0){
+	int* age = malloc(sizeof(int));
+	*age = GetInt();
+	while (*age <= 0){
 		printf("Did he dead? You have to input age more then 0 again for this dolphin: ");
-		age = GetInt();
+		*age = GetInt();
 	}
 	//printf("Age: %d\n", age);
 	return age;
